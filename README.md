@@ -1,24 +1,157 @@
-# README
+# Portfolio API
+The core customer for Measurabl is an owner or operator of commercial real estate. There are a few fundamental concepts that we have in our system to serve these customers: Portfolios, Sites, and Spaces.
+This Ruby on Rails API will serve further information about Portfolios, Sites, and Spaces per the prviously provided requirements.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Author
+- Diana Buffone | [GitHub](https://github.com/Diana20920) |
+  [LinkedIn](https://www.linkedin.com/in/dianabuffone/)
 
-Things you may want to cover:
+## Table of Contents
+  - [Built With](#built-with)
+  - [Getting Started](#getting-started)
+  - [Usage](#usage)
+  - [Running the tests](#running-the-tests)
+  - [DB Schema](#db-schema)
+  - [Endpoints](#endpoints)
+  - [Acknowledgements](#acknowledgements)
 
-* Ruby version
+## Built With
 
-* System dependencies
+* [Ruby on Rails](https://rubyonrails.org)
 
-* Configuration
+### Gems Used
+<!-- - [Faraday](https://github.com/lostisland/faraday)
+- [Bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby)
+- [Figaro](https://github.com/laserlemon/figaro)
+- [Travis](https://github.com/travis-ci/travis.rb)
+- [Rubocop](https://github.com/rubocop/rubocop)
+- [Webmock](https://github.com/bblimke/webmock)
+- [VCR](https://github.com/vcr/vcr) -->
 
-* Database creation
+### Prerequisites
 
-* Database initialization
+To run this application you will need
+* Ruby 2.5.3 and Rails 6.1.4.1
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple steps:
+1. Fork this repo
+2. Clone your forked repo to your local machine
+   ```sh
+   git clone <git@github.com:SE-Seedling/portfolio_api.git>
+   ```
+3. Install gem packages
+   ```sh
+   bundle install
+   ```
 
-* Deployment instructions
+## Usage
+   1. Create rails database and migrate
+       ```sh
+        rails db:setup
+       ```
+   2. Start rails server
+       ```sh
+       rails s
+       ```
+   3. Nagivate to `http://localhost:3000/`
 
-* ...
+## Running the tests
+RSpec testing suite is utilized for testing this application.
+- Run the RSpec suite to ensure everything is passing as expected
+  ```sh
+  bundle exec rspec
+  ```
+
+## DB Schema
+
+
+## Endpoints
+1. Portfolios
+
+  1a. `GET /api/v1/portfolios` - A list of portfolios in the system
+
+  <details>
+  <summary>Example response </summary>
+
+  ```json
+
+  ```
+  </details>
+
+  1b. `GET /api/v1/portfolios/:id` - detailed information about a single portfolio
+
+  <details>
+  <summary>Example response </summary>
+
+  ```json
+
+  ```
+  </details>
+
+2. Sites
+
+  2a. `GET /api/v1/portfolios/:id/sites` - A list of sites for a given portfolio
+
+  <details>
+  <summary>Example response </summary>
+
+  ```json
+
+  ```
+  </details>
+
+  2b. `GET /api/v1/portfolios/:id/sites/:id` - detailed information about a single site
+
+  <details>
+  <summary>Example response </summary>
+
+  ```json
+
+  ```
+  </details>
+
+3. Spaces
+
+  3a. `GET /api/v1/portfolios/:id/sites/:id/spaces` - A list of sites for a given site
+
+  <details>
+  <summary>Example response </summary>
+
+  ```json
+
+  ```
+  </details>
+
+  3b. `GET /api/v1/portfolios/:id/sites/:id/spaces/:id` - detailed information about a single space
+
+  <details>
+  <summary>Example response </summary>
+
+  ```json
+
+  ```
+  </details>
+
+  3c. `GET /api/v1/portfolios/:id/sites/:id/spaces/statistics` - statistics of square footage of spaces for a site (e.g. Total, Average)
+
+  <details>
+  <summary>Example response </summary>
+
+  ```json
+
+  ```
+  </details>
+
+  3d. `GET /api/v1/portfolios/:id/spaces/statistics` - statistics of a square footage of spaces for a portfolio (e.g. Total, Average)
+
+  <details>
+  <summary>Example response </summary>
+
+  ```json
+
+  ```
+  </details>
+
+## Acknowledgements
