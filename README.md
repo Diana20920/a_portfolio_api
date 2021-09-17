@@ -20,6 +20,15 @@ This Ruby on Rails API will serve further information about Portfolios, Sites, a
 * [Ruby on Rails](https://rubyonrails.org)
 
 ### Gems Used
+  - [Jbuilder](https://github.com/rails/jbuilder)
+  - [rspec-rails](https://github.com/rspec/rspec-rails)
+  - [rspec-pride](https://github.com/ferrous26/rspec-pride)
+  - [Pry](https://pry.github.io/)
+  - [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails)
+  - [Faker](https://github.com/faker-ruby/faker)
+  - [Capybara](https://github.com/teamcapybara/capybara)
+  - [SimpleCov](https://github.com/simplecov-ruby/simplecov)
+  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
 <!-- - [Faraday](https://github.com/lostisland/faraday)
 - [Bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby)
 - [Figaro](https://github.com/laserlemon/figaro)
