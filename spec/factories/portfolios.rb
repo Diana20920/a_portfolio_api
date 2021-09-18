@@ -1,11 +1,11 @@
 FactoryBot.define do
   factory :portfolio do
-    region { "MyString" }
-    street_address { "MyString" }
-    city { "MyString" }
-    state { "MyString" }
-    zip_code { "MyString" }
-    total_sqft { 1.5 }
+    region { Faker::Types.rb_string }
+    street_address { Faker::Address.street_address }
+    city { Faker::Address.city }
+    state { Faker::Address. }
+    zip_code { Faker::Address.zip_code }
+    total_sqft { Faker::Number.decimal(l_digits: 8, r_digits: 1) }
     entity { nil }
   end
 end

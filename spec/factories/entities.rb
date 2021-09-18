@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :entity do
-    name { "MyString" }
-    address { "MyString" }
+    name { Faker::Company.name }
+    address { Faker::Address.full_address }
   end
 end
