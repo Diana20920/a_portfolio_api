@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :portfolio do
-    region { Faker::Types.rb_string }
+    region { Faker::TvShows::GameOfThrones.house }
     street_address { Faker::Address.street_address }
     city { Faker::Address.city }
     state { Faker::Address.state }
