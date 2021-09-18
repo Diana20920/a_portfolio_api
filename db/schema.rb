@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_18_165745) do
+ActiveRecord::Schema.define(version: 2021_09_18_194348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,10 +24,6 @@ ActiveRecord::Schema.define(version: 2021_09_18_165745) do
 
   create_table "portfolios", force: :cascade do |t|
     t.string "region"
-    t.string "street_address"
-    t.string "city"
-    t.string "state"
-    t.string "zip_code"
     t.float "total_sqft"
     t.bigint "entity_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -43,6 +39,10 @@ ActiveRecord::Schema.define(version: 2021_09_18_165745) do
     t.bigint "portfolio_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "street_address"
+    t.string "city"
+    t.string "state"
+    t.string "zip_code"
     t.index ["portfolio_id"], name: "index_sites_on_portfolio_id"
   end
 

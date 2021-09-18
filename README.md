@@ -13,7 +13,7 @@ This Ruby on Rails API will serve further information about Portfolios, Sites, a
   - [Running the tests](#running-the-tests)
   - [DB Schema](#db-schema)
   - [Endpoints](#endpoints)
-  - [Acknowledgements](#acknowledgements)
+  - [Considerations](#considerations)
 
 ## Built With
 
@@ -56,7 +56,7 @@ To get a local copy up and running follow these simple steps:
    ```
 
 ## Usage
-   1. Create rails database and migrate
+   1. Use the seed file provided to populate your database:
        ```sh
         rails db:setup
        ```
@@ -77,90 +77,90 @@ RSpec testing suite is utilized for testing this application.
 
 
 ## Endpoints
-1. Portfolios
+1. **Portfolios**
 
-  1a. `GET /api/v1/portfolios` - A list of portfolios in the system
+    1a. `GET /api/v1/portfolios` - A list of portfolios in the system
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response </summary>
 
-  ```json
+    ```json
 
-  ```
-  </details>
+    ```
+    </details>
 
-  1b. `GET /api/v1/portfolios/:id` - detailed information about a single portfolio
+    1b. `GET /api/v1/portfolios/:id` - detailed information about a single portfolio
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response </summary>
 
-  ```json
+    ```json
 
-  ```
-  </details>
+    ```
+    </details>
 
-2. Sites
+2. **Sites**
 
-  2a. `GET /api/v1/portfolios/:id/sites` - A list of sites for a given portfolio
+    2a. `GET /api/v1/portfolios/:id/sites` - A list of sites for a given portfolio
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response </summary>
 
-  ```json
+    ```json
 
-  ```
-  </details>
+    ```
+    </details>
 
-  2b. `GET /api/v1/portfolios/:id/sites/:id` - detailed information about a single site
+    2b. `GET /api/v1/portfolios/:id/sites/:id` - detailed information about a single site
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response </summary>
 
-  ```json
+    ```json
 
-  ```
-  </details>
+    ```
+    </details>
 
-3. Spaces
+3. **Spaces**
 
-  3a. `GET /api/v1/portfolios/:id/sites/:id/spaces` - A list of sites for a given site
+    3a. `GET /api/v1/portfolios/:id/sites/:id/spaces` - A list of sites for a given site
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response </summary>
 
-  ```json
+    ```json
 
-  ```
-  </details>
+    ```
+    </details>
 
-  3b. `GET /api/v1/portfolios/:id/sites/:id/spaces/:id` - detailed information about a single space
+    3b. `GET /api/v1/portfolios/:id/sites/:id/spaces/:id` - detailed information about a single space
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response </summary>
 
-  ```json
+    ```json
 
-  ```
-  </details>
+    ```
+    </details>
 
-  3c. `GET /api/v1/portfolios/:id/sites/:id/spaces/statistics` - statistics of square footage of spaces for a site (e.g. Total, Average)
+    3c. `GET /api/v1/portfolios/:id/sites/:id/spaces/statistics` - statistics of square footage of spaces for a site (e.g. Total, Average)
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response </summary>
 
-  ```json
+    ```json
 
-  ```
-  </details>
+    ```
+    </details>
 
-  3d. `GET /api/v1/portfolios/:id/spaces/statistics` - statistics of a square footage of spaces for a portfolio (e.g. Total, Average)
+    3d. `GET /api/v1/portfolios/:id/spaces/statistics` - statistics of a square footage of spaces for a portfolio (e.g. Total, Average)
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response </summary>
 
-  ```json
+    ```json
 
-  ```
-  </details>
+    ```
+    </details>
 
-## Acknowledgements
+## Considerations
