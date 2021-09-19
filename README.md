@@ -181,9 +181,10 @@ RSpec testing suite is utilized for testing this application.
 
     2a. `GET /api/v1/portfolios/:id/sites` - A list of sites for a given portfolio
       - A portfolio ID is required
+      - Example request with 5 total sites for given portfolio
       - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites`
     <details>
-    <summary>Example response </summary>
+    <summary>Example response (expand) </summary>
 
     ```json
     {
@@ -234,14 +235,31 @@ RSpec testing suite is utilized for testing this application.
     </details>
 
   2b. `GET /api/v1/portfolios/:id/sites/:id` - detailed information about a single site
+    - A portfolio ID and site ID are required
+    - Example request: `http://localhost:3000/api/v1/portfolios/45/sites/91`
 
-  <details>
-  <summary>Example response </summary>
+    <details>
+    <summary>Example response (expand) </summary>
 
-  ```json
-
-  ```
-  </details>
+    ```json
+    {
+        "data": {
+            "id": "91",
+            "type": "site_details",
+            "attributes": {
+                "name": "Asoka",
+                "street_address": "268 Kihn Station",
+                "city": "Gildafort",
+                "state": "New Mexico",
+                "zip_code": "79509-7692",
+                "spaces_available": false,
+                "total_dollar_value_per_sqft": "35636.08",
+                "portfolio_id": 45
+            }
+        }
+    }
+    ```
+    </details>
 
 3. **Spaces**
 
