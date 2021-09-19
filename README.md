@@ -20,8 +20,8 @@ This Ruby on Rails API will serve further information about Portfolios, Sites, a
 * [Ruby on Rails](https://rubyonrails.org)
 
 ### Gems Used
-  - [Jbuilder](https://github.com/rails/jbuilder)
   - [rspec-rails](https://github.com/rspec/rspec-rails)
+  - [Fast JSON API](https://github.com/Netflix/fast_jsonapi)
   - [rspec-pride](https://github.com/ferrous26/rspec-pride)
   - [Pry](https://pry.github.io/)
   - [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails)
@@ -180,24 +180,68 @@ RSpec testing suite is utilized for testing this application.
 2. **Sites**
 
     2a. `GET /api/v1/portfolios/:id/sites` - A list of sites for a given portfolio
-
+      - A portfolio ID is required
+      - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites`
     <details>
     <summary>Example response </summary>
 
     ```json
-
+    {
+        "data": [
+            {
+                "id": "88",
+                "type": "site",
+                "attributes": {
+                    "name": "Gembucket",
+                    "portfolio_id": 45
+                }
+            },
+            {
+                "id": "89",
+                "type": "site",
+                "attributes": {
+                    "name": "Trippledex",
+                    "portfolio_id": 45
+                }
+            },
+            {
+                "id": "90",
+                "type": "site",
+                "attributes": {
+                    "name": "Vagram",
+                    "portfolio_id": 45
+                }
+            },
+            {
+                "id": "91",
+                "type": "site",
+                "attributes": {
+                    "name": "Asoka",
+                    "portfolio_id": 45
+                }
+            },
+            {
+                "id": "92",
+                "type": "site",
+                "attributes": {
+                    "name": "Hatity",
+                    "portfolio_id": 45
+                }
+            }
+        ]
+    }
     ```
     </details>
 
-    2b. `GET /api/v1/portfolios/:id/sites/:id` - detailed information about a single site
+  2b. `GET /api/v1/portfolios/:id/sites/:id` - detailed information about a single site
 
-    <details>
-    <summary>Example response </summary>
+  <details>
+  <summary>Example response </summary>
 
-    ```json
+  ```json
 
-    ```
-    </details>
+  ```
+  </details>
 
 3. **Spaces**
 
