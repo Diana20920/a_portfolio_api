@@ -80,22 +80,100 @@ RSpec testing suite is utilized for testing this application.
 1. **Portfolios**
 
     1a. `GET /api/v1/portfolios` - A list of portfolios in the system
-
+      - Example request with 9 total portfolios in the system
     <details>
-    <summary>Example response </summary>
+    <summary> Example response (expand) </summary>
 
     ```json
-
+    {
+        "data": [
+            {
+                "id": "37",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Longwaters"
+                }
+            },
+            {
+                "id": "38",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Osgrey of Standfast"
+                }
+            },
+            {
+                "id": "39",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Torrent of Littlesister"
+                }
+            },
+            {
+                "id": "40",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Baelish of Harrenhal"
+                }
+            },
+            {
+                "id": "41",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Toyne"
+                }
+            },
+            {
+                "id": "42",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Grey"
+                }
+            },
+            {
+                "id": "43",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Peasebury of Poddingfield"
+                }
+            },
+            {
+                "id": "44",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Shepherd"
+                }
+            },
+            {
+                "id": "45",
+                "type": "portfolio",
+                "attributes": {
+                    "region": "Butterwell"
+                }
+            }
+        ]
+    }
     ```
     </details>
 
-    1b. `GET /api/v1/portfolios/:id` - detailed information about a single portfolio
+  1b. `GET /api/v1/portfolios/:id` - detailed information about a single portfolio
+    - A portfolio ID is required
+    - Example request: `GET http://localhost:3000/api/v1/portfolios/45`
 
     <details>
-    <summary>Example response </summary>
+    <summary>Example response (expand) </summary>
 
     ```json
-
+    {
+        "data": {
+            "id": "45",
+            "type": "portfolio_details",
+            "attributes": {
+                "region": "Butterwell",
+                "total_sqft": 19098921.6,
+                "entity_id": 25
+            }
+        }
+    }
     ```
     </details>
 
