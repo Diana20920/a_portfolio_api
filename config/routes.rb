@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         end
       end
       get '/statistics/sites/:id', to: 'statistics#site'
+      get '/statistics/portfolios/:id', to: 'statistics#portfolio'
     end
   end
 end
