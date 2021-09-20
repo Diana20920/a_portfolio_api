@@ -264,24 +264,78 @@ RSpec testing suite is utilized for testing this application.
 3. **Spaces**
 
     3a. `GET /api/v1/portfolios/:id/sites/:id/spaces` - A list of sites for a given site
+      - A portfolio ID and site ID are required
+      - Example request with 6 total spaces for a given site
+      - Example request: `http://localhost:3000/api/v1/portfolios/45/sites/92/spaces`
 
     <details>
-    <summary>Example response </summary>
+    <summary>Example response (expand) </summary>
 
     ```json
-
+    {
+        "data": [
+            {
+                "id": "45",
+                "type": "space",
+                "attributes": {
+                    "category": "Becco",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "46",
+                "type": "space",
+                "attributes": {
+                    "category": "Allesandro's",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "47",
+                "type": "space",
+                "attributes": {
+                    "category": "Phoebe's Apartment",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "48",
+                "type": "space",
+                "attributes": {
+                    "category": "15 Yemen Road, Yemen",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "49",
+                "type": "space",
+                "attributes": {
+                    "category": "Monica and Chandler's House",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "50",
+                "type": "space",
+                "attributes": {
+                    "category": "Phoebe's Apartment",
+                    "site_id": 92
+                }
+            }
+        ]
+    }
     ```
     </details>
 
-    3b. `GET /api/v1/portfolios/:id/sites/:id/spaces/:id` - detailed information about a single space
+  3b. `GET /api/v1/portfolios/:id/sites/:id/spaces/:id` - detailed information about a single space
 
-    <details>
-    <summary>Example response </summary>
+  <details>
+  <summary>Example response </summary>
 
-    ```json
+  ```json
 
-    ```
-    </details>
+  ```
+  </details>
 
     3c. `GET /api/v1/portfolios/:id/sites/:id/spaces/statistics` - statistics of square footage of spaces for a site (e.g. Total, Average)
 
