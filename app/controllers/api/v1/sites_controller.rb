@@ -6,7 +6,7 @@ class Api::V1::SitesController < ApplicationController
   end
 
   def show
-    site_record = Site.find(params[:id])
+    site_record = @portfolio.sites.find(params[:id])
     render json: SiteDetailsSerializer.new(site_record)
   end
 

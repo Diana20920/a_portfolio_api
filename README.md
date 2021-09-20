@@ -236,7 +236,7 @@ RSpec testing suite is utilized for testing this application.
 
   2b. `GET /api/v1/portfolios/:id/sites/:id` - detailed information about a single site
     - A portfolio ID and site ID are required
-    - Example request: `http://localhost:3000/api/v1/portfolios/45/sites/91`
+    - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites/91`
 
     <details>
     <summary>Example response (expand) </summary>
@@ -264,6 +264,94 @@ RSpec testing suite is utilized for testing this application.
 3. **Spaces**
 
     3a. `GET /api/v1/portfolios/:id/sites/:id/spaces` - A list of sites for a given site
+      - A portfolio ID and site ID are required
+      - Example request with 6 total spaces for a given site
+      - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites/92/spaces`
+
+    <details>
+    <summary>Example response (expand) </summary>
+
+    ```json
+    {
+        "data": [
+            {
+                "id": "45",
+                "type": "space",
+                "attributes": {
+                    "category": "Becco",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "46",
+                "type": "space",
+                "attributes": {
+                    "category": "Allesandro's",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "47",
+                "type": "space",
+                "attributes": {
+                    "category": "Phoebe's Apartment",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "48",
+                "type": "space",
+                "attributes": {
+                    "category": "15 Yemen Road, Yemen",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "49",
+                "type": "space",
+                "attributes": {
+                    "category": "Monica and Chandler's House",
+                    "site_id": 92
+                }
+            },
+            {
+                "id": "50",
+                "type": "space",
+                "attributes": {
+                    "category": "Phoebe's Apartment",
+                    "site_id": 92
+                }
+            }
+        ]
+    }
+    ```
+    </details>
+
+  3b. `GET /api/v1/portfolios/:id/sites/:id/spaces/:id` - detailed information about a single space
+    - A portfolio ID, site ID, and space ID are required
+    - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites/92/spaces/47`
+
+    <details>
+    <summary>Example response (expand) </summary>
+
+    ```json
+    {
+        "data": {
+            "id": "47",
+            "type": "space_details",
+            "attributes": {
+                "category": "Phoebe's Apartment",
+                "vacant": false,
+                "square_footage": 387.6,
+                "dollar_per_sqft": "29.17",
+                "site_id": 92
+            }
+        }
+    }
+    ```
+    </details>
+
+  3c. `GET /api/v1/portfolios/:id/sites/:id/spaces/statistics` - statistics of square footage of spaces for a site (e.g. Total, Average)
 
     <details>
     <summary>Example response </summary>
@@ -273,27 +361,7 @@ RSpec testing suite is utilized for testing this application.
     ```
     </details>
 
-    3b. `GET /api/v1/portfolios/:id/sites/:id/spaces/:id` - detailed information about a single space
-
-    <details>
-    <summary>Example response </summary>
-
-    ```json
-
-    ```
-    </details>
-
-    3c. `GET /api/v1/portfolios/:id/sites/:id/spaces/statistics` - statistics of square footage of spaces for a site (e.g. Total, Average)
-
-    <details>
-    <summary>Example response </summary>
-
-    ```json
-
-    ```
-    </details>
-
-    3d. `GET /api/v1/portfolios/:id/spaces/statistics` - statistics of a square footage of spaces for a portfolio (e.g. Total, Average)
+  3d. `GET /api/v1/portfolios/:id/spaces/statistics` - statistics of a square footage of spaces for a portfolio (e.g. Total, Average)
 
     <details>
     <summary>Example response </summary>

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'List of all portfolios in the system' do
+RSpec.describe 'List of sites for a given portfolio' do
   let(:entity) { FactoryBot.create(:entity) }
   let(:portfolio) { FactoryBot.create(:portfolio, entity_id: entity.id) }
 
