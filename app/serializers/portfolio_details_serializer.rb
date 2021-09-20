@@ -1,4 +1,4 @@
 class PortfolioDetailsSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :region, :total_sqft, :entity_id
+  attributes :region, :entity_id
 end

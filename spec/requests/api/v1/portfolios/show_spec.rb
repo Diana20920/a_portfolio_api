@@ -31,10 +31,6 @@ RSpec.describe 'Detailed information about a single porfolio' do
     expect(@portfolio_object[:attributes][:region]).to eq(@single_portfolio.region)
   end
 
-  it 'Portfolio total square_feet' do
-    expect(@portfolio_object[:attributes][:total_sqft]).to eq(@single_portfolio.total_sqft)
-  end
-
   it 'Portfolio with its entity_id' do
     expect(@portfolio_object[:attributes][:entity_id]).to eq(entity.id)
   end

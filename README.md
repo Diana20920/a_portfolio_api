@@ -1,6 +1,6 @@
 # Portfolio API
 The core customer for Measurabl is an owner or operator of commercial real estate. There are a few fundamental concepts that we have in our system to serve these customers: Portfolios, Sites, and Spaces.
-This Ruby on Rails API will serve further information about Portfolios, Sites, and Spaces per the prviously provided requirements.
+This Ruby on Rails API will serve further information about Portfolios, Sites, and Spaces per the previously provided requirements.
 
 ### Author
 - Diana Buffone | [GitHub](https://github.com/Diana20920) |
@@ -351,23 +351,38 @@ RSpec testing suite is utilized for testing this application.
     ```
     </details>
 
-  3c. `GET /api/v1/portfolios/:id/sites/:id/spaces/statistics` - statistics of square footage of spaces for a site (e.g. Total, Average)
-
+  3c. `GET /api/v1/statistics/sites/:id` - statistics of square footage of spaces for a site (e.g. Total, Average)
+    - A site ID is required
+    - Example request: `GET http://localhost:3000/api/v1/statistics/sites/92`
     <details>
-    <summary>Example response </summary>
+    <summary>Example response (expand) </summary>
 
     ```json
-
+    {
+        "site_id": 92,
+        "name": "Hatity",
+        "total_spaces": 6,
+        "total_sqft": 3085.8,
+        "average_sqft": 514.3
+    }
     ```
     </details>
 
   3d. `GET /api/v1/portfolios/:id/spaces/statistics` - statistics of a square footage of spaces for a portfolio (e.g. Total, Average)
+    - A portfolio ID is required
+    - Example request: `GET http://localhost:3000/api/v1/statistics/portfolios/45`
 
     <details>
-    <summary>Example response </summary>
+    <summary>Example response (expand) </summary>
 
     ```json
-
+    {
+        "portfolio_id": 45,
+        "region": "Butterwell",
+        "total_spaces": 10,
+        "total_sqft": 5315.4,
+        "average_sqft": 531.54
+    }
     ```
     </details>
 
