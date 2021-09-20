@@ -351,13 +351,20 @@ RSpec testing suite is utilized for testing this application.
     ```
     </details>
 
-  3c. `GET /api/v1/portfolios/:id/sites/:id/spaces/statistics` - statistics of square footage of spaces for a site (e.g. Total, Average)
-
+  3c. `GET /api/v1/statistics/sites/:id` - statistics of square footage of spaces for a site (e.g. Total, Average)
+    - A site ID is required
+    - Example request: `GET http://localhost:3000/api/v1/statistics/sites/92`
     <details>
     <summary>Example response </summary>
 
     ```json
-
+    {
+        "site_id": 92,
+        "name": "Hatity",
+        "total_spaces": 6,
+        "total_sqft": 3085.8,
+        "average_sqft": 514.3
+    }
     ```
     </details>
 
