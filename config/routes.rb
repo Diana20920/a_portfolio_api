@@ -6,6 +6,7 @@ Rails.application.routes.draw do
           resources :spaces, only: [:index, :show]
         end
       end
+      get '/statistics/sites/:id', to: 'statistics#site'
     end
   end
 end
