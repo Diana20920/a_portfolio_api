@@ -77,79 +77,79 @@ RSpec testing suite is utilized for testing this application.
       - Example request with 9 total portfolios in the system
       - Example request: `http://localhost:3000/api/v1/portfolios`
 
-      <details>
-      <summary> Example response (expand) </summary>
+        <details>
+        <summary> Example response (expand) </summary>
 
-      ```json
-      {
-          "data": [
-              {
-                  "id": "37",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Longwaters"
-                  }
-              },
-              {
-                  "id": "38",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Osgrey of Standfast"
-                  }
-              },
-              {
-                  "id": "39",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Torrent of Littlesister"
-                  }
-              },
-              {
-                  "id": "40",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Baelish of Harrenhal"
-                  }
-              },
-              {
-                  "id": "41",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Toyne"
-                  }
-              },
-              {
-                  "id": "42",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Grey"
-                  }
-              },
-              {
-                  "id": "43",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Peasebury of Poddingfield"
-                  }
-              },
-              {
-                  "id": "44",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Shepherd"
-                  }
-              },
-              {
-                  "id": "45",
-                  "type": "portfolio",
-                  "attributes": {
-                      "region": "Butterwell"
-                  }
-              }
-          ]
-      }
-      ```
-      </details>
+        ```json
+        {
+            "data": [
+                {
+                    "id": "37",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Longwaters"
+                    }
+                },
+                {
+                    "id": "38",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Osgrey of Standfast"
+                    }
+                },
+                {
+                    "id": "39",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Torrent of Littlesister"
+                    }
+                },
+                {
+                    "id": "40",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Baelish of Harrenhal"
+                    }
+                },
+                {
+                    "id": "41",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Toyne"
+                    }
+                },
+                {
+                    "id": "42",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Grey"
+                    }
+                },
+                {
+                    "id": "43",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Peasebury of Poddingfield"
+                    }
+                },
+                {
+                    "id": "44",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Shepherd"
+                    }
+                },
+                {
+                    "id": "45",
+                    "type": "portfolio",
+                    "attributes": {
+                        "region": "Butterwell"
+                    }
+                }
+            ]
+        }
+        ```
+        </details>
 
     1b. `GET /api/v1/portfolios/:id`
       - Detailed information about a single portfolio
@@ -372,7 +372,7 @@ RSpec testing suite is utilized for testing this application.
         ```
         </details>
 
-    3d. `GET /api/v1/portfolios/:id/spaces/statistics`
+    3d. `GET /api/v1/statistics/portfolios/:id`
       - Statistics of a square footage of spaces for a portfolio (e.g. Total, Average)
       - A portfolio ID is required
       - Example request: `http://localhost:3000/api/v1/statistics/portfolios/45`
