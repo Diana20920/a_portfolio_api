@@ -57,7 +57,7 @@ To get a local copy up and running follow these simple steps:
        ```sh
        rails s
        ```
-   3. Nagivate to `http://localhost:3000/`
+   3. Use the example requests provided in [Endpoints](#endpoints) section
 
 ## Running Tests
 RSpec testing suite is utilized for testing this application.
@@ -75,6 +75,7 @@ RSpec testing suite is utilized for testing this application.
     1a. `GET /api/v1/portfolios`
       - A list of portfolios in the system
       - Example request with 9 total portfolios in the system
+      - Example request: `http://localhost:3000/api/v1/portfolios`
 
       <details>
       <summary> Example response (expand) </summary>
@@ -153,7 +154,7 @@ RSpec testing suite is utilized for testing this application.
     1b. `GET /api/v1/portfolios/:id`
       - Detailed information about a single portfolio
       - A portfolio ID is required
-      - Example request: `GET http://localhost:3000/api/v1/portfolios/45`
+      - Example request: `http://localhost:3000/api/v1/portfolios/45`
 
         <details>
         <summary>Example response (expand) </summary>
@@ -179,7 +180,7 @@ RSpec testing suite is utilized for testing this application.
       - A list of sites for a given portfolio
       - A portfolio ID is required
       - Example request with 5 total sites for given portfolio
-      - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites`
+      - Example request: `http://localhost:3000/api/v1/portfolios/45/sites`
 
         <details>
         <summary>Example response (expand) </summary>
@@ -235,7 +236,7 @@ RSpec testing suite is utilized for testing this application.
     2b. `GET /api/v1/portfolios/:id/sites/:id`
       - Detailed information about a single site
       - A portfolio ID and site ID are required
-      - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites/91`
+      - Example request: `http://localhost:3000/api/v1/portfolios/45/sites/91`
 
         <details>
         <summary>Example response (expand) </summary>
@@ -266,7 +267,7 @@ RSpec testing suite is utilized for testing this application.
       - A list of sites for a given site
       - A portfolio ID and site ID are required
       - Example request with 6 total spaces for a given site
-      - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites/92/spaces`
+      - Example request: `http://localhost:3000/api/v1/portfolios/45/sites/92/spaces`
 
         <details>
         <summary>Example response (expand) </summary>
@@ -330,7 +331,7 @@ RSpec testing suite is utilized for testing this application.
     3b. `GET /api/v1/portfolios/:id/sites/:id/spaces/:id`
       - Detailed information about a single space
       - A portfolio ID, site ID, and space ID are required
-      - Example request: `GET http://localhost:3000/api/v1/portfolios/45/sites/92/spaces/47`
+      - Example request: `http://localhost:3000/api/v1/portfolios/45/sites/92/spaces/47`
 
         <details>
         <summary>Example response (expand) </summary>
@@ -355,7 +356,7 @@ RSpec testing suite is utilized for testing this application.
     3c. `GET /api/v1/statistics/sites/:id`
       - Statistics of square footage of spaces for a site (e.g. Total, Average)
       - A site ID is required
-      - Example request: `GET http://localhost:3000/api/v1/statistics/sites/92`
+      - Example request: `http://localhost:3000/api/v1/statistics/sites/92`
 
         <details>
         <summary>Example response (expand) </summary>
@@ -374,7 +375,7 @@ RSpec testing suite is utilized for testing this application.
     3d. `GET /api/v1/portfolios/:id/spaces/statistics`
       - Statistics of a square footage of spaces for a portfolio (e.g. Total, Average)
       - A portfolio ID is required
-      - Example request: `GET http://localhost:3000/api/v1/statistics/portfolios/45`
+      - Example request: `http://localhost:3000/api/v1/statistics/portfolios/45`
 
         <details>
         <summary>Example response (expand) </summary>
@@ -391,3 +392,11 @@ RSpec testing suite is utilized for testing this application.
         </details>
 
 ## Considerations
+- MVP: Chosed to create this API as a querying API only. Future implementation would be to allow a user to create, update, delete records
+- All sites are owned. If some sites are simply managed by an entity, that is not being accounted for in this version
+- All branches will be deleted upon successful merge
+- Working on the assumption that all data has been entered correctly and all required params are present and valid
+- Statistics endpoints are not ReSTful
+- Statistics endpoint responses are custom-built
+
+*Note:* Localhost and [Postman](https://www.postman.com/) were used to create the example data seen in the [Endpoints](#endpoints) section
