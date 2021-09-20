@@ -10,7 +10,7 @@ This Ruby on Rails API will serve further information about Portfolios, Sites, a
   - [Built With](#built-with)
   - [Getting Started](#getting-started)
   - [Usage](#usage)
-  - [Running the tests](#running-the-tests)
+  - [Running Tests](#running-tests)
   - [DB Schema](#db-schema)
   - [Endpoints](#endpoints)
   - [Considerations](#considerations)
@@ -29,13 +29,6 @@ This Ruby on Rails API will serve further information about Portfolios, Sites, a
   - [Capybara](https://github.com/teamcapybara/capybara)
   - [SimpleCov](https://github.com/simplecov-ruby/simplecov)
   - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
-<!-- - [Faraday](https://github.com/lostisland/faraday)
-- [Bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby)
-- [Figaro](https://github.com/laserlemon/figaro)
-- [Travis](https://github.com/travis-ci/travis.rb)
-- [Rubocop](https://github.com/rubocop/rubocop)
-- [Webmock](https://github.com/bblimke/webmock)
-- [VCR](https://github.com/vcr/vcr) -->
 
 ### Prerequisites
 
@@ -66,7 +59,7 @@ To get a local copy up and running follow these simple steps:
        ```
    3. Nagivate to `http://localhost:3000/`
 
-## Running the tests
+## Running Tests
 RSpec testing suite is utilized for testing this application.
 - Run the RSpec suite to ensure everything is passing as expected
   ```sh
@@ -74,7 +67,7 @@ RSpec testing suite is utilized for testing this application.
   ```
 
 ## DB Schema
-
+![](assets/README-8aee3db8.png)
 
 ## Endpoints
 1. **Portfolios**
