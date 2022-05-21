@@ -1,6 +1,8 @@
 # Portfolio API
-The core customer for Measurabl is an owner or operator of commercial real estate. There are a few fundamental concepts that we have in our system to serve these customers: Portfolios, Sites, and Spaces.
-This Ruby on Rails API will serve further information about Portfolios, Sites, and Spaces per the previously provided requirements.
+This is a personal project to demonstrate fundamental knowledge for creating a Rails API and using ActiveRecord plus additional technologies.
+
+A company has the following concepts in order to provide services to commercial real estate owners: Portfolios, Sites, and Spaces.
+This Rails API will serve information on said concepts.
 
 ### Author
 - Diana Buffone | [GitHub](https://github.com/Diana20920) |
@@ -39,10 +41,7 @@ To run this application you will need
 
 To get a local copy up and running follow these simple steps:
 1. Fork this repo
-2. Clone your forked repo to your local machine
-   ```sh
-   git clone <git@github.com:SE-Seedling/portfolio_api.git>
-   ```
+2. Clone your forked repo to your local machine using `git clone`
 3. Install gem packages
    ```sh
    bundle install
@@ -67,7 +66,7 @@ RSpec testing suite is utilized for testing this application.
   ```
 
 ## DB Schema
-![](assets/README-8aee3db8.png)
+![](assets/README-b0121e1f.png)
 
 ## Endpoints
 1. **Portfolios**
@@ -390,13 +389,5 @@ RSpec testing suite is utilized for testing this application.
         }
         ```
         </details>
-
-## Considerations
-- MVP: Chosed to create this API as a querying API only. Future implementation would be to allow a user to create, update, delete records
-- All sites are owned. If some sites are simply managed by an entity, that is not being accounted for in this version
-- All branches will be deleted upon successful merge
-- Working on the assumption that all data has been entered correctly and all required params are present and valid
-- Statistics endpoints are not ReSTful
-- Statistics endpoint responses are custom-built
 
 *Note:* Localhost and [Postman](https://www.postman.com/) were used to create the example data seen in the [Endpoints](#endpoints) section
