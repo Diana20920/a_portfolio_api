@@ -343,7 +343,7 @@ RSpec testing suite is utilized for testing this application.
                 "attributes": {
                     "category": "Phoebe's Apartment",
                     "vacant": false,
-                    "square_footage": 387.6,
+                    "sqft": 387.6,
                     "dollar_per_sqft": "29.17",
                     "site_id": 92
                 }

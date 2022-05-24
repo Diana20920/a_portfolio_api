@@ -37,8 +37,8 @@ RSpec.describe 'Detailed information about a single space' do
     expect(@space_object[:attributes][:vacant]).to eq(@single_space.vacant)
   end
 
-  it 'Space square_footage' do
-    expect(@space_object[:attributes][:square_footage]).to eq(@single_space.square_footage)
+  it 'Space sqft' do
+    expect(@space_object[:attributes][:sqft]).to eq(@single_space.sqft)
   end
 
   it 'Space dollar_per_sqft' do

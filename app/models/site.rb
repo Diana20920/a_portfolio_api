@@ -20,12 +20,12 @@ class Site < ApplicationRecord
 
   def site_total_sqft(id)
     site = Site.find(id)
-    site.spaces.sum(:square_footage)
+    site.spaces.sum(:sqft)
   end
 
   def site_average_sqft(id)
     site = Site.find(id)
-    total = site.spaces.sum(:square_footage)
+    total = site.spaces.sum(:sqft)
     total / (site.spaces.count)
   end
 end

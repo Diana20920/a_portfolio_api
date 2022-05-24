@@ -18,12 +18,12 @@ RSpec.describe Portfolio do
     let(:site2) { FactoryBot.create(:site, portfolio_id: portfolio.id) }
 
     before do
-      @space1 = FactoryBot.create(:space, site_id: site1.id, square_footage: 500.53)
-      @space2 = FactoryBot.create(:space, site_id: site1.id, square_footage: 612.85)
-      @space3 = FactoryBot.create(:space, site_id: site1.id, square_footage: 1000.42)
-      @space4 = FactoryBot.create(:space, site_id: site2.id, square_footage: 2000.10)
-      @space5 = FactoryBot.create(:space, site_id: site2.id, square_footage: 650.78)
-      @space6 = FactoryBot.create(:space, site_id: site2.id, square_footage: 1031.90)
+      @space1 = FactoryBot.create(:space, site_id: site1.id, sqft: 500.53)
+      @space2 = FactoryBot.create(:space, site_id: site1.id, sqft: 612.85)
+      @space3 = FactoryBot.create(:space, site_id: site1.id, sqft: 1000.42)
+      @space4 = FactoryBot.create(:space, site_id: site2.id, sqft: 2000.10)
+      @space5 = FactoryBot.create(:space, site_id: site2.id, sqft: 650.78)
+      @space6 = FactoryBot.create(:space, site_id: site2.id, sqft: 1031.90)
     end
 
     describe '#portfolio_total_sqft' do
