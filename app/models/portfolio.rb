@@ -17,12 +17,12 @@ class Portfolio < ApplicationRecord
 
   def portfolio_total_sqft(id)
     portfolio = Portfolio.find(id)
-    portfolio.spaces.sum(:square_footage)
+    portfolio.spaces.sum(:sqft)
   end
 
   def portfolio_average_sqft(id)
     portfolio = Portfolio.find(id)
-    total_spaces = portfolio.spaces.sum(:square_footage)
+    total_spaces = portfolio.spaces.sum(:sqft)
     average = total_spaces / (portfolio.spaces.count)
     average.round(2)
   end

@@ -3,5 +3,5 @@ class Space < ApplicationRecord
 
   validates :category, presence: true
   validates :vacant, presence: true
-  validates :square_footage, presence: true
+  validates :sqft, presence: true
 end

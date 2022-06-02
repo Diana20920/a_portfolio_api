@@ -20,9 +20,9 @@ RSpec.describe Site do
     let(:site) { FactoryBot.create(:site, portfolio_id: portfolio.id) }
 
     before do
-      @space1 = FactoryBot.create(:space, site_id: site.id, square_footage: 100.5)
-      @space2 = FactoryBot.create(:space, site_id: site.id, square_footage: 150.85)
-      @space3 = FactoryBot.create(:space, site_id: site.id, square_footage: 400.10)
+      @space1 = FactoryBot.create(:space, site_id: site.id, sqft: 100.5)
+      @space2 = FactoryBot.create(:space, site_id: site.id, sqft: 150.85)
+      @space3 = FactoryBot.create(:space, site_id: site.id, sqft: 400.10)
     end
 
     describe '#site_total_sqft' do
